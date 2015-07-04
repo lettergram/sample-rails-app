@@ -77,6 +77,7 @@ class User < ActiveRecord::Base
       self.email = email.downcase
     end
 
+
     # Creates and assigns the activation token and digest.
     def create_activation_digest
       self.activation_token  = User.new_token
